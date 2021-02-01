@@ -93,8 +93,8 @@ for d = 0:dt:2
         end
         
         if mod(i,nL) ~=1
-            posXdot = 0.1*posXdot + 0.9*posLeaderXdot;
-            posYdot = 0.1*posYdot + 0.9*posLeaderYdot;
+            posXdot = wf*posXdot + wy*posLeaderXdot;
+            posYdot = wf*posYdot + wy*posLeaderYdot;
             posX(i) = posX(i) + dt*posXdot;
             posY(i) = posY(i) + dt*posYdot;
         
